@@ -14,17 +14,22 @@ module.exports = {
     description:
       "Explore awesome worldwide tours and what makes each of them unique. Forget your daily routine and say yes to adventure!",
     author: "Scott McKell",
+    twitterUsername: "@john_smilga",
+    image: "/defaultBcg.jpeg",
+    siteUrl: "https://backroads-zottwickel.netlify.app/",
     data: {
       name: "Scott",
       age: 30,
     },
   },
   plugins: [
+    `gatsby-plugin-playground`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
