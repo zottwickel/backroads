@@ -30,6 +30,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -42,6 +43,14 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://backroads-zottwickel.netlify.app/",
+        sitemap: "https://backroads-zottwickel.netlify.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],
